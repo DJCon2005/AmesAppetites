@@ -1,5 +1,5 @@
 {
-  "name": "al-2",
+  "name": "ames-appetites-backend",
   "version": "1.0.0",
   "description": "Before submitting, update this README with:",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.las.iastate.edu:se-coms-3190/spring-2026/final-project/al-2.git"
+    "url": "https://github.com/DJCon2005/AmesAppetites.git"
   },
   "keywords": [],
   "author": "",
