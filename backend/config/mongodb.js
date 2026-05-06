@@ -1,7 +1,7 @@
 const {MongoClient} = require("mongodb");
 
-const url = "mongodb+srv://24benhurley_db_user:Admin3924@amesappetites.dbjrcos.mongodb.net/?appName=AmesAppetites";
-const dbName="AmesAppetites";
+const url = process.env.MONGODB_URI;//"mongodb+srv://24benhurley_db_user:Admin3924@amesappetites.dbjrcos.mongodb.net/?appName=AmesAppetites";
+const dbName= process.env.MONGODB_DB_NAME || "AmesAppetites";//"AmesAppetites";
 
 let client;
 let db;
@@ -9,6 +9,9 @@ let db;
 async function connectDB(){
     if(db) return db;
 
+    if (!url) {
+        throw new Error("MONGODB_URI is not set");
+    }
     client = new MongoClient(url);
     await client.connect();
     db = client.db(dbName);

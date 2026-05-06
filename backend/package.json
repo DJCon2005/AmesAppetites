@@ -4,8 +4,7 @@
   "description": "Before submitting, update this README with:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:frontend": "npm run dev --prefix frontend"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
