@@ -5,9 +5,12 @@ const { connectDB } = require("./config/mongodb");
 const app = express();
 
 app.use(cors({
-  origin: ["https://localhost:5173", "https://ames-appetites-frontend-6xib2oboo-dillon-s-projects1"],
+  origin: ["https://localhost:5173", "https://ames-appetites-frontend.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowHeaders: ["Content-Type", "Authorization"]
 }));
+app.options("*", cors());
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
