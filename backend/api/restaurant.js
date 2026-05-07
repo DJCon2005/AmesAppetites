@@ -1,6 +1,6 @@
 const express = require("express");
 const { ObjectId } = require("mongodb");
-const { getDB } = require("../config/mongodb");
+const { connectDB } = require("../config/mongodb");
 // const requireAdmin = require("../middleware/requireAdmin");
 
 const router = express.Router();
@@ -8,7 +8,7 @@ const router = express.Router();
 // GET all restaurants
 router.get("/", async (req, res, next) => {
   try {
-    const db = getDB();
+    const db = await connectDB();
     const { search = "", city, category, categories, price } = req.query;
     const selectedCategory = category || categories;
 
@@ -41,7 +41,7 @@ router.get("/", async (req, res, next) => {
 // GET dish of the week
 router.get("/dotw", async (req, res, next) => {
   try {
-    const db = getDB();
+    const db = await connectDB();
     const dotw = await db.collection("restaurants").findOne({ isDishOfTheWeek: true });
 
     if (!dotw) {
@@ -66,7 +66,7 @@ router.get("/:id", async (req, res, next) => {
         message: "Restaurant not found",
       });
     }
-    const db = getDB();
+    const db = await connectDB();
     const restaurant = await db
       .collection("restaurants")
       .findOne({ _id: new ObjectId(req.params.id) });
@@ -87,7 +87,7 @@ router.get("/:id", async (req, res, next) => {
 // POST create restaurant
 router.post("/", async (req, res, next) => {
   try {
-    const db = getDB();
+    const db = await connectDB();
     const {
       title,
       address,
@@ -160,7 +160,7 @@ router.put("/:id", async (req, res, next) => {
         message: "Restaurant not found",
       });
     }
-    const db = getDB();
+    const db = await connectDB();
     const id = new ObjectId(req.params.id);
 
     const updateDoc = {
@@ -197,7 +197,7 @@ router.delete("/:id", async (req, res, next) => {
         message: "Restaurant not found",
       });
     }
-    const db = getDB();
+    const db = await connectDB();
     const id = new ObjectId(req.params.id);
 
     const restaurant = await db.collection("restaurants").findOne({ _id: id });
