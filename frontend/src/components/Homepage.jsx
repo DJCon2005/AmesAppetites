@@ -14,7 +14,7 @@ const Homepage = () => {
                 setLoading(true);
                 
                 // Fetch all restaurants
-                const res = await fetch('http://ames-appetites-backend.vercel.app/api/restaurants');
+                const res = await fetch('https://ames-appetites-backend.vercel.app/api/restaurants');
                 if (res.ok) {
                     const data = await res.json();
                     // Shuffle and pick 3
@@ -25,7 +25,7 @@ const Homepage = () => {
                 // Fetch favorites if token exists
                 const token = localStorage.getItem('token');
                 if (token) {
-                    const favRes = await fetch('http://ames-appetites-backend.vercel.app/api/favorites', {
+                    const favRes = await fetch('https://ames-appetites-backend.vercel.app/api/favorites', {
                         headers: { 'Authorization': `Bearer ${token}` }
                     });
                     if (favRes.ok) {

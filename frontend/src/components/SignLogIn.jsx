@@ -38,8 +38,8 @@ const SignLogIn = () => {
     try {
       const endpoint =
         mode === "login"
-          ? "http://ames-appetites-backend.vercel.app/api/auth/login"
-          : "http://ames-appetites-backend.vercel.app/api/auth/signup";
+          ? "https://ames-appetites-backend.vercel.app/api/auth/login"
+          : "https://ames-appetites-backend.vercel.app/api/auth/signup";
 
       const payload =
         mode === "login"
