@@ -9,7 +9,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.options("*", cors({
+app.options(/.*/, cors({
   origin: ["http://localhost:5173", "https://ames-appetites-frontend.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
@@ -30,7 +30,7 @@ app.use("/api/reviews", require("./api/reviews"));
 app.use("/api/auth", require("./api/authRoutes"));
 app.use("/api/favorites", require("./api/favorites"));
 
-app.use("/api/*splat", (req, res) => {
+app.use("/api", (req, res) => {
   res.status(404).json({
     status: 404,
     message: "API route not found",
