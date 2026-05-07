@@ -177,6 +177,10 @@ const Navbar = () => {
             Dish Of The Week
           </Link>
 
+          <Link to="/search" className={linkStyle}>
+            All Restaurants
+          </Link>
+
           {user && (
             <Link to="/favorites" className={linkStyle}>
               Favorites
