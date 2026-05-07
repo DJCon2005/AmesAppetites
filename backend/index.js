@@ -3,10 +3,16 @@ const cors = require("cors");
 const { connectDB } = require("./config/mongodb");
 
 const app = express();
-const PORT = process.env.PORT || 8081;
 
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Backend is running",
+    status: "ok"
+  });
+});
 
 app.use("/api/restaurants", require("./api/restaurant"));
 app.use("/api/admin", require("./api/admin"));
@@ -31,9 +37,8 @@ app.use((err, req, res, next) => {
 });
 
 connectDB()
-  .then(() => {
-    app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
-  })
   .catch((err) => {
     console.error("DB startup failed:", err);
   });
+
+module.exports = app;
