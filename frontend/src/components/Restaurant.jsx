@@ -4,8 +4,8 @@ import {handleApiError} from "../utils/handleApiError";
 import { Rating } from 'react-simple-star-rating'
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-const API_BASE = "http://localhost:8081/api/restaurants";
-const FAVORITES_API = "http://localhost:8081/api/favorites";
+const API_BASE = "http://ames-appetites-backend.vercel.app/api/restaurants";
+const FAVORITES_API = "http://ames-appetites-backend.vercel.app/api/favorites";
 
 const Restaurant = () => {
   const { id } = useParams();

@@ -31,7 +31,7 @@ const AdminManagement = () => {
 
   async function loadRestaurants() {
     try {
-      const res = await fetch("http://localhost:8081/api/restaurants");
+      const res = await fetch("http://ames-appetites-backend.vercel.app/api/restaurants");
       const data = await res.json();
 
       if (!res.ok) {
@@ -53,7 +53,7 @@ const AdminManagement = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        "http://localhost:8081/api/admin/recent-reviews",
+        "http://ames-appetites-backend.vercel.app/api/admin/recent-reviews",
         {
           headers: {
             "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const AdminManagement = () => {
 
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:8081/api/restaurants", {
+      const res = await fetch("http://ames-appetites-backend.vercel.app/api/restaurants", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +137,7 @@ const AdminManagement = () => {
     try {
       setSelectedRestaurantId(id);
 
-      const res = await fetch(`http://localhost:8081/api/restaurants/${id}`);
+      const res = await fetch(`http://ames-appetites-backend.vercel.app/api/restaurants/${id}`);
       const data = await res.json();
 
       if (!res.ok) {
@@ -175,7 +175,7 @@ const AdminManagement = () => {
 
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:8081/api/restaurants/${selectedRestaurantId}`,
+        `http://ames-appetites-backend.vercel.app/api/restaurants/${selectedRestaurantId}`,
         {
           method: "PUT",
           headers: {
@@ -217,7 +217,7 @@ const AdminManagement = () => {
     if (!confirmed) return;
 
     try {
-      const res = await fetch(`http://localhost:8081/api/restaurants/${id}`, {
+      const res = await fetch(`http://ames-appetites-backend.vercel.app/api/restaurants/${id}`, {
         method: "DELETE",
       });
 
@@ -251,7 +251,7 @@ const AdminManagement = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:8081/api/reviews/${id}`, {
+      const res = await fetch(`http://ames-appetites-backend.vercel.app/api/reviews/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

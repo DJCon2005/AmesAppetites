@@ -14,7 +14,7 @@ const DishOfTheWeek = () => {
                 setLoading(true);
                 setError('');
                 // Assuming an endpoint to get the dish of the week restaurant
-                const res = await fetch('http://localhost:8081/api/restaurants/dotw');
+                const res = await fetch('http://ames-appetites-backend.vercel.app/api/restaurants/dotw');
                 
                 if (!res.ok) {
                     if (res.status === 404) {

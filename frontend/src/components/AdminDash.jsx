@@ -18,7 +18,7 @@ const AdminDashboard = () => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:8081/api/admin/stats", {
+        const res = await fetch("http://ames-appetites-backend.vercel.app/api/admin/stats", {
           headers: {
             "Content-Type": "application/json",
             Authorization: token ? `Bearer ${token}` : "",

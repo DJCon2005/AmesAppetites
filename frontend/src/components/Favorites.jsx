@@ -18,7 +18,7 @@ const Favorites = () => {
                 return;
             }
 
-            const res = await fetch('http://localhost:8081/api/favorites', {
+            const res = await fetch('http://ames-appetites-backend.vercel.app/api/favorites', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -48,7 +48,7 @@ const Favorites = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const res = await fetch(`http://localhost:8081/api/favorites/${restaurantId}`, {
+            const res = await fetch(`http://ames-appetites-backend.vercel.app/api/favorites/${restaurantId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

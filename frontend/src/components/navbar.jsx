@@ -62,7 +62,7 @@ const Navbar = () => {
       }
 
       try {
-        const res = await fetch(`http://localhost:8081/api/restaurants?search=${searchQuery}`);
+        const res = await fetch(`http://ames-appetites-backend.vercel.app/api/restaurants?search=${searchQuery}`);
         if (res.ok) {
           const data = await res.json();
           setSearchResults(data);

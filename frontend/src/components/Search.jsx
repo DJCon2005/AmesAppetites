@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import {handleApiError} from "../utils/handleApiError";
 
-const API_BASE = "http://localhost:8081/api/restaurants";
+const API_BASE = "http://ames-appetites-backend.vercel.app/api/restaurants";
 
 const Search = () => {
   const [restaurants, setRestaurants] = useState([]);

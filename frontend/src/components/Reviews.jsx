@@ -47,7 +47,7 @@ const Reviews = () => {
     const fetchReviews = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8081/api/reviews/${restaurantId}`,
+          `http://ames-appetites-backend.vercel.app/api/reviews/${restaurantId}`,
         );
   
         if (!res.ok) {
@@ -73,7 +73,7 @@ const Reviews = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8081/api/reviews", {
+      const res = await fetch("http://ames-appetites-backend.vercel.app/api/reviews", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ restaurantId, rating, authorName, comment }),
