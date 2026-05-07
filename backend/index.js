@@ -5,11 +5,15 @@ const { connectDB } = require("./config/mongodb");
 const app = express();
 
 app.use(cors({
-  origin: ["https://localhost:5173", "https://ames-appetites-frontend.vercel.app"],
+  origin: ["http://localhost:5173", "https://ames-appetites-frontend.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.options("*", cors());
+app.options("*", cors({
+  origin: ["http://localhost:5173", "https://ames-appetites-frontend.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(express.json());
 
