@@ -4,7 +4,10 @@ const { connectDB } = require("./config/mongodb");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://localhost:5173", "https://ames-appetites-frontend-6xib2oboo-dillon-s-projects1"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
