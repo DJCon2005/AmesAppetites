@@ -28,7 +28,7 @@ router.get("/stats", auth, reqAdmin, async (req, res, next) => {
         .toArray(),
     ]);
 
-    const restaurantIds = recentReviews.map((review) => review.restaurantId.toString());
+    const restaurantIds = recentReviews.map((review) => review.restaurantId);
 
     const restaurants = await db
       .collection("restaurants")
