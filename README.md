@@ -1,11 +1,14 @@
 # AL_2
 
-# Start up Instructions:
-## for the frontend: In al-2 folder run: npm run dev:frontend
-## for the backend: navigate to backend and run npx nodemon server.js
+# Build Instructions:
+for the frontend: In al-2 folder run: npm run dev:frontend
+for the backend: navigate to backend and run npx nodemon server.js
+
+# Setup Instructions -
+pretty simple, make sure to run npm install in BOTH backend and frontend, then use the startup instructions.
 
 # Web Instructions:
-## Go to Ames-Appetites.vercel.app and try it out!
+Go to Ames-Appetites.vercel.app[ames-appetites.vercel.app] and try it out!
 
 # Team Members:
 ## Ben Hurley
@@ -22,9 +25,6 @@ restaurant website to show off the cuisine options of Ames, Iowa. We have many d
 - A dynamic search system that allows the user to both sort through the restaurants & use our dynamic search bar.
 - Reviews page to leave a review to share your opinions with others about Ames' restaurant.
 - Plus more!
-
-# Setup Instructions -
-pretty simple, make sure to run npm install in BOTH backend and frontend, then use the startup instructions.
 
 # Known Limitations
 - We do have our database running on MongoDB Atlas, so while that does take off the difficulty of storing the data locally, the website may be slow at times
