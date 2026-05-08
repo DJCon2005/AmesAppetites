@@ -8,7 +8,7 @@ for the backend: navigate to backend and run npx nodemon server.js
 pretty simple, make sure to run npm install in BOTH backend and frontend, then use the startup instructions.
 
 # Web Instructions:
-Go to [Ames-Appetites.vercel.app](ames-appetites.vercel.app) and try it out!
+Go to [Ames-Appetites.vercel.app](https://ames-appetites.vercel.app) and try it out!
 
 # Team Members:
 ## Ben Hurley
