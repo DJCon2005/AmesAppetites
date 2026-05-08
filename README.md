@@ -13,9 +13,11 @@ Go to [Ames-Appetites.vercel.app](https://ames-appetites.vercel.app) and try it 
 # Team Members:
 ## Ben Hurley
 ### bfhurley@iastate.edu
+### [Github Page](https://github.com/ItsBentacular/IowaStateProjects)
 
 ## Dillon Conrad
 ###  djcon19@iastate.edu
+### [LinkedIn](https://www.linkedin.com/in/dillon-conrad05)
 
 # Project Description
 Ames Appetites is our website for our final project in COMS3190 (web design) that uses MongoDB, React, TailwindCSS, among other npm modules in order to create a functional
