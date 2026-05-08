@@ -39,7 +39,7 @@ router.get("/stats", auth, reqAdmin, async (req, res, next) => {
 
     const recentReviewsWithNames = recentReviews.map((reviews) => ({
       ...review, 
-      restaurantName: restaurantMap[review.restaurantId?.toString()] || "Unknown restaurant",
+      restaurantName: restaurantMap[review.restaurantId?.toString()] || "No restaurant",
     }));
     
     res.status(200).json({
