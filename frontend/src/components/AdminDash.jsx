@@ -91,6 +91,7 @@ const AdminDashboard = () => {
                   <div key={review._id} className="rounded-xl bg-[#f7dfc7] p-4">
                     <h3 className="text-xl font-bold">{review.authorName}</h3>
                     <p className = "text-sm text-stone-700">{new Date(review.createdAt).toLocaleDateString()}</p>
+                    <p className="mt-2"> {review.restaurantName}</p>
                     <p className="mt-2">{review.comment || "No comment provided."}</p>
                     <p className="mt-2 font-medium">Rating: {review.rating} / 5</p>
                   </div>

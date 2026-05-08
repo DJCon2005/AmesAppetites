@@ -28,12 +28,26 @@ router.get("/stats", auth, reqAdmin, async (req, res, next) => {
         .toArray(),
     ]);
 
+    const restaurantIds = recentReviews.map((review) => review.restaurantId);
+    
+    const restaurants = await db.collection("restaurants").find ({_id: {$in: restaurantIds}}).toArray();
+
+    const restaurantMap = {};
+    restaurantIds.forEach((restaurant) => {
+      restaurantMap[restaurant._id.toString()] = restaurant.title;
+    });
+
+    const recentReviewsWithNames = recentReviews.map((reviews) => ({
+      ...review, 
+      restaurantName: restaurantMap[review.restaurantId?.toString()] || "Unknown restaurant",
+    }));
+    
     res.status(200).json({
       totalRestaurants,
       totalReviews,
       totalFavorites,
       totalUsers,
-      recentReviews,
+      recentReviews: recentReviewsWithNames,
     });
   } catch (err) {
     next(err);

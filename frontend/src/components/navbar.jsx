@@ -125,7 +125,7 @@ const Navbar = () => {
             to="/"
             className="text-2xl font-bold font-edu-cursive text-red-600"
           >
-            Ames<span className="text-yellow-500">Appetites</span>
+            Ames<span className="text-red-600">Appetites</span>
           </Link>
         </div>
 
