@@ -59,7 +59,7 @@ const Homepage = () => {
         </h2>
         <br />
         <p class="text-black drop-shadow-md text-center text-sm font-semibold">
-          Here you can see the homepage. Below there are three randomly gernated
+          Here you can see the homepage. Below there are three randomly generated
           retaurants/dining locations in our databse. Each retaurant card is
           clickable and will take you to that loactions details page! There you
           can navigate to their website, write and view reviews, even view their
