@@ -16,7 +16,7 @@ Go to [Ames-Appetites.vercel.app](https://ames-appetites.vercel.app) and try it 
 ### [Github Page](https://github.com/ItsBentacular/IowaStateProjects)
 
 ## Dillon Conrad
-###  djcon19@iastate.edu
+###  djconrad1219@gmail.com
 ### [LinkedIn](https://www.linkedin.com/in/dillon-conrad05)
 
 # Project Description
